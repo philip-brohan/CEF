@@ -1,2 +1,2 @@
 # CEF
-Copernicus Exchange Format library and spoecification
+Copernicus Exchange Format library and specification
