@@ -37,10 +37,10 @@ The first 10 lines of the file are a series of headers, each given as a ``name``
    Link to the C3S DRS metadata repository. To be specified by Antonia.
 
    ``Var``:
-   Name of the variable included in the file. There is a recommended list of standard variable names. Use this if possible.
+   Name of the variable included in the file. There is a :doc:`recommended list <tables/variable_names>` of standard variable names. Use this if possible.
 
    ``Meta``:
-   Anything else. Comma-separated string of metadata entries. Each entry may be any string (except no tabs, commas, or carriage returns). There is a standard list of meaningful entries, but other entries can be added as necessary. Metadata specified here is assumed to apply to all observations in this file, unless overwritten by the observation-specific metadata entry.
+   Anything else. Comma-separated string of metadata entries. Each entry may be any string (except no tabs, commas, or carriage returns). There is a :doc:`standard list of meaningful entries <tables/metadata>`, but other entries can be added as necessary. Metadata specified here is assumed to apply to all observations in this file, unless overwritten by the observation-specific metadata entry.
 
 Data table
 ----------
@@ -60,10 +60,10 @@ Lines 11 and onward in the file are a table of observations. Line 11 is a header
    Time of day at which the observation was made (UTC). A 4-digit integer where the first 2 digits give the hour of the observation, and the last two digits give the minute. If the hour of observation is less than 10, the first digit may be omitted. 
 
    ``TimeF``:
-   Time period of observation (instantanious, integrated over previous 24 hours, ...). Integer code. There is a table of meaningful codes.
+   Time period of observation (instantanious, integrated over previous 24 hours, ...). Integer code. There is a :doc:`table of meaningful codes <tables/time_period_codes>`.
 
    ``Value``:
    The observation value.
 
    ``Meta``:
-   Anything else. Comma-separated string of metadata entries. Each entry may be any string (except no tabs, commas, or carriage returns). There is a standard list of meaningful entries, but other entries can be added as necessary. Metadata specified here only applies to this observation, and overrides any file-wide specification.
+   Anything else. Comma-separated string of metadata entries. Each entry may be any string (except no tabs, commas, or carriage returns). There is a :doc:`standard list of meaningful entries <tables/metadata>`, but other entries can be added as necessary. Metadata specified here only applies to this observation, and overrides any file-wide specification.
