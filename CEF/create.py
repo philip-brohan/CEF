@@ -16,7 +16,7 @@
 
 import pandas
 
-def create(version='0.0.1')):
+def create(version='0.0.1'):
     """Create a data structure matching a CEF file
 
     Args:

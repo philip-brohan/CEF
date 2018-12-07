@@ -17,9 +17,7 @@ import io
 import pandas
 
 def write_file(obs,file_name):
-    """Load all observations for one calendar month (for one variable)
-
-    Data must be available in directory ../../data.
+    """Write the specified set of obs to a file in CEF format.
 
     Args:
         file_name (:obj:`str`): File (or 'open'able object)
@@ -29,7 +27,6 @@ def write_file(obs,file_name):
 
     Raises:
         ValueError: obs not a CEF structure
-        IOError: Not a readable CEF file.
 
     |
     """
