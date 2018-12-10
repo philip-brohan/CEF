@@ -1,7 +1,7 @@
 Authors and acknowledgements
 ============================
 
-This document is currently maintained by Philip Brohan (philip.brohan @ metoffice.gov.uk). All criticism should be directed to him - put please **don't** send email, `raise an issue <https://github.com/philip-brohan/CEF/issues/new>`_ instead.
+This document is currently maintained by Philip Brohan (philip.brohan @ metoffice.gov.uk). All criticism should be directed to him - put please **don't** send email, `raise an issue <https://github.com/philip-brohan/SEF/issues/new>`_ instead.
 
 The file format specification is the responsibility of the `Copernicus Data Rescue Service <http://ensembles-eu.metoffice.com/C3S-DR/index_C3SDR.html>`_. Changes must be agreed by that group.
 

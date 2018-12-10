@@ -11,16 +11,16 @@
 # GNU Lesser General Public License for more details.
 #
 
-# Create an empty data structure corresponding to a Copernicus Exchange 
-#   Format (CEF) file
+# Create an empty data structure corresponding to a Station Exchange 
+#   Format (SEF) file
 
 import pandas
 
 def create(version='0.0.1'):
-    """Create a data structure matching a CEF file
+    """Create a data structure matching a SEF file
 
     Args:
-        version (:obj:`str`): Semantic version of CIF to be supported
+        version (:obj:`str`): Semantic version of SEF to be supported
 
     Returns:
         :obj:`dict`: Data as key:value pairs.
@@ -31,7 +31,7 @@ def create(version='0.0.1'):
     iversion=[int(x) for x in version.split('.')]
     if iversion[0]>0 or iversion[1]>0:
         raise IOError("CEF versions > 0.0 are not supported")
-    result={'CEF'   : version,
+    result={'SEF'   : version,
             'ID'    : None,
             'Name'  : None,
             'Lat'   : None,

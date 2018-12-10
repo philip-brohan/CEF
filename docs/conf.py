@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 #
-# CEF documentation build configuration file, created by
+# SEF documentation build configuration file, created by
 # sphinx-quickstart on Mon Feb 26 09:55:01 2018.
 #
 # This file is execfile()d with the current directory set to its
@@ -54,7 +54,7 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # General information about the project.
-project = u'Copernicus Exchange Format'
+project = u'Station Exchange Format'
 copyright = u'2018, Philip Brohan'
 author = u'Philip Brohan'
 
@@ -136,11 +136,6 @@ html_theme = 'sphinxdoc'
 #    'textalign': 'left',
 #    'headerfont': 'serif',    # Need caps and digits same height (20CR)
 #}
-#    'github_user': 'oldweather',
-#    'github_repo': 'DWR',
-#    'page_width': '980px'
-#    'show_powered_by': 'false',
-#    'sidebar_collapse': 'false',
 
 # Add any paths that contain custom themes here, relative to this directory.
 # html_theme_path = []
@@ -148,11 +143,11 @@ html_theme = 'sphinxdoc'
 # The name for this set of Sphinx documents.
 # "<project> v<release> documentation" by default.
 #
-html_title = u'Copernicus Exchange Format'
+html_title = u'Station Exchange Format'
 
 # A shorter title for the navigation bar.  Default is the same as html_title.
 #
-html_short_title = 'CEF specification'
+html_short_title = 'SEF specification'
 
 # The name of an image file (relative to this directory) to place at the top
 # of the sidebar.
@@ -248,7 +243,7 @@ html_search_language = 'en'
 # html_search_scorer = 'scorer.js'
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = 'CEFdoc'
+htmlhelp_basename = 'SEFdoc'
 
 # -- Options for LaTeX output ---------------------------------------------
 
@@ -274,7 +269,7 @@ latex_elements = {
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
-    (master_doc, 'CEF.tex', u'CEF Documentation',
+    (master_doc, 'SEF.tex', u'SEF Documentation',
      u'Philip Brohan', 'manual'),
 ]
 
@@ -316,7 +311,7 @@ latex_documents = [
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    (master_doc, 'CEF', u'CEF Documentation',
+    (master_doc, 'SEF', u'SEF Documentation',
      [author], 1)
 ]
 
@@ -331,8 +326,8 @@ man_pages = [
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-    (master_doc, 'CEF', u'CEF Documentation',
-     author, 'Philip Brohan', 'CEF',
+    (master_doc, 'SEF', u'SEF Documentation',
+     author, 'Philip Brohan', 'SEF',
      'Miscellaneous'),
 ]
 

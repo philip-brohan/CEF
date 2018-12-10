@@ -11,7 +11,7 @@
 # GNU Lesser General Public License for more details.
 #
 
-# Load the weather observations in a Copernicus Exchange Format (CEF) file
+# Load the weather observations in a Station Exchange Format (SEF) file
 
 import io
 import pandas
@@ -26,20 +26,20 @@ def read_file(file_name):
         :obj:`dict`: Data as key:value pairs.
 
     Raises:
-        IOError: Not a readable CEF file.
+        IOError: Not a readable SEF file.
 
     |
     """
 
     f=io.open(file_name,'r',encoding='utf8')
-    # Check that it's a CEF file and get the version
+    # Check that it's a SEF file and get the version
     l=f.readline().rstrip()
-    if l[0:4] != u'CEF\t':
-        raise IOError("%s does not look like a CEF file" % file_name)
+    if l[0:4] != u'SEF\t':
+        raise IOError("%s does not look like a SEF file" % file_name)
     version=l.split('\t')[1]
     iversion=[int(x) for x in version.split('.')]
     if iversion[0]>0 or iversion[1]>0:
-        raise IOError("CEF versions > 0.0 are not supported")
+        raise IOError("SEF versions > 0.0 are not supported")
     result={'CEF':version}
     # Read in the header rows
     for row in range(9):

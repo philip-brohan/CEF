@@ -1,4 +1,4 @@
-CEF	0.0.1
+SEF	0.0.1
 ID	DWR_Zarate
 Name	Zárate
 Lat	-34.0958
@@ -7,7 +7,8 @@ Alt	NA
 Source	NA
 Repo	NA
 Var	msl pressure
-Meta	PTC=T,PGC=?,Units=hPa
+Units	hPa
+Meta	PTC=T,PGC=?
 Year	Month	Day	HHMM	TimeF	Value	Meta	
 1902	12	22	700	0	1005.91	
 1902	12	23	700	0	1009.78	

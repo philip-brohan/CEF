@@ -12,24 +12,24 @@
 #
 
 """
-This module provides a python API to newly-rescued weather observations in Copernicus Exchange Format (CEF) files.
+This module provides a python API to newly-rescued weather observations in Station Exchange Format (SEF) files.
 
 It provides three functions :func:`read_file`, :func:`write_file`, and :func:`create`:
 
 .. code-block:: python
 
-    import CEF
-    obs=CEF.read_file('/wherever/Exeter_1811.cef')
+    import SEF
+    obs=SEF.read_file('/wherever/Exeter_1811.tsv')
 
-Will load the file contents as a :obj:`dict` that replicates the CEF file structure.
+Will load the file contents as a :obj:`dict` that replicates the SEF file structure.
 
 .. code-block:: python
 
-    obs=CEF.create()
+    obs=SEF.create()
     # Add data and metadata to the obs structure
-    CEF.write_file(obs,'/wherever/Exeter_new.cef')
+    SEF.write_file(obs,'/wherever/Exeter_new.tsv')
 
-Will create the specified CEF file with the obs as specified. 
+Will create the specified SEF file with the obs as specified. 
 |
 """
 

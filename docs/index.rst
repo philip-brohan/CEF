@@ -1,5 +1,5 @@
-The Copernicus Exchange Format (CEF)
-====================================
+The Station Exchange Format (SEF)
+=================================
 
 .. warning::
 
@@ -12,8 +12,8 @@ This format is for land observations from fixed stations. Marine observations, a
 .. toctree::
    :maxdepth: 1
 
-   The file format <CEF>
-   The python API </module_CEF.rst>
+   The file format <SEF>
+   The python API </module_SEF.rst>
 
 .. toctree::
    :maxdepth: 1

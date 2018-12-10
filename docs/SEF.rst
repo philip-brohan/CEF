@@ -1,19 +1,19 @@
-The CEF File Format
+The SEF File Format
 ===================
 
-CEF files look like this:
+SEF files look like this:
 
 .. literalinclude:: ../examples/basic.tsv
 
-One CEF file contains observations of one variable from one station. It is a text file encoded as `UTF8 <https://en.wikipedia.org/wiki/UTF-8>`_. It is a `tab-separated values <https://en.wikipedia.org/wiki/Tab-separated_values>`_ file and should have a ``.tsv`` extension. This means it can be easily viewed and edited in any text editor or spreadsheet program (though care should be taken to preserve the tab structure and text encoding).
+One SEF file contains observations of one variable from one station. It is a text file encoded as `UTF8 <https://en.wikipedia.org/wiki/UTF-8>`_. It is a `tab-separated values <https://en.wikipedia.org/wiki/Tab-separated_values>`_ file and should have a ``.tsv`` extension. This means it can be easily viewed and edited in any text editor or spreadsheet program (though care should be taken to preserve the tab structure and text encoding).
 
 Header
 ------
 
 The first 10 lines of the file are a series of headers, each given as a ``name``::``value`` pair separated by a tab. They must be in the order given. Missing values can be given as ``NA`` or left blank. The version number must be present.
 
-   ``CEF``:
-   The first three characters in the file must be ``CEF``. The associated value is the `semantic version <https://semver.org/>`_ of the format used. This enables software to recognise the format and read the rest of the file correctly. At the moment, only version 0.0 is in use.
+   ``SEF``:
+   The first three characters in the file must be ``SEF``. The associated value is the `semantic version <https://semver.org/>`_ of the format used. This enables software to recognise the format and read the rest of the file correctly. At the moment, only version 0.0 is in use.
 
    ``ID``: 
    `WIGOS <http://www.wmo.int/pages/prog/www/wigos/index_en.html>`_ compatible station identifier. "The local identifier may be up to 16 characters long. It must not contain blanks [...]. The local identifier may contain only lower-case or upper-case Latin letters, numbers or the characters: - (dash), _ (underscore) or . (full stop)." (`Source <https://library.wmo.int/opac/doc_num.php?explnum_id=4007>`_). This is the *machine readable* name of the station.

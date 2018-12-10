@@ -11,13 +11,13 @@
 # GNU Lesser General Public License for more details.
 #
 
-# Store a set of weather observations in a Copernicus Exchange Format (CEF) file
+# Store a set of weather observations in a Station Exchange Format (SEF) file
 
 import io
 import pandas
 
 def write_file(obs,file_name):
-    """Write the specified set of obs to a file in CEF format.
+    """Write the specified set of obs to a file in SEF format.
 
     Args:
         file_name (:obj:`str`): File (or 'open'able object)
@@ -26,22 +26,22 @@ def write_file(obs,file_name):
         :obj:`dict`: Data as key:value pairs.
 
     Raises:
-        ValueError: obs not a CEF structure
+        ValueError: obs not a SEF structure
 
     |
     """
 
     try:    
-       version=obs['CEF']
+       version=obs['SEF']
        iversion=[int(x) for x in version.split('.')]
        if iversion[0]>0 or iversion[1]>0:
-           raise IOError("CEF versions > 0.0 are not supported")
+           raise IOError("SEF versions > 0.0 are not supported")
     except:
-       raise ValueError("This does not look like a CEF datastructure")
+       raise ValueError("This does not look like a SEF datastructure")
 
     f=io.open(file_name,'w',encoding='utf8')
     # Header first
-    for header in ('CEF','ID','Name','Lat','Lon','Alt','Source','Repro',
+    for header in ('SEF','ID','Name','Lat','Lon','Alt','Source','Repro',
                    'Var'):
         if(obs[header] is not None):
             f.write("%s\t%s\n" % (header,obs[header]))
