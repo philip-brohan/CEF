@@ -30,7 +30,7 @@ def create(version='0.0.1'):
  
     iversion=[int(x) for x in version.split('.')]
     if iversion[0]>0 or iversion[1]>0:
-        raise IOError("CEF versions > 0.0 are not supported")
+        raise IOError("SEF versions > 0.0 are not supported")
     result={'SEF'   : version,
             'ID'    : None,
             'Name'  : None,
@@ -40,6 +40,7 @@ def create(version='0.0.1'):
             'Source': None,
             'Repo'  : None,
             'Var'   : None,
+            'Units' : None,
             'Meta'  : None,
             'Data'  : pandas.DataFrame({'Year' : None,
                                         'Month': None,

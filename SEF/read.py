@@ -40,9 +40,9 @@ def read_file(file_name):
     iversion=[int(x) for x in version.split('.')]
     if iversion[0]>0 or iversion[1]>0:
         raise IOError("SEF versions > 0.0 are not supported")
-    result={'CEF':version}
+    result={'SEF':version}
     # Read in the header rows
-    for row in range(9):
+    for row in range(10):
         header=f.readline().rstrip().split('\t')
         try:
             result[header[0]]=header[1]
@@ -53,9 +53,10 @@ def read_file(file_name):
     f.close()
     # Read in the data table
     o=pandas.read_csv(file_name,sep='\t',
-                      skiprows=10,
+                      skiprows=11,
                       usecols=range(7))
+    o['Meta']=o['Meta'].map(lambda(x): x.split(','),
+                            na_action='ignore')
     result['Data']=o
     return result
     
- 

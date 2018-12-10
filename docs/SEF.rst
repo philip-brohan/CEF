@@ -39,13 +39,16 @@ The first 10 lines of the file are a series of headers, each given as a ``name``
    ``Var``:
    Name of the variable included in the file. There is a :doc:`recommended list <tables/variable_names>` of standard variable names. Use this if possible.
 
+   ``Units``:
+   Units in which the variable value is given (e.g. 'hPa', 'Pa', 'K', 'm/s'). Where possible, this should be compliant with `UDUNITS-2 <https://www.unidata.ucar.edu/software/udunits/>`_.
+
    ``Meta``:
    Anything else. Comma-separated string of metadata entries. Each entry may be any string (except no tabs, commas, or carriage returns). There is a :doc:`standard list of meaningful entries <tables/metadata>`, but other entries can be added as necessary. Metadata specified here is assumed to apply to all observations in this file, unless overwritten by the observation-specific metadata entry.
 
 Data table
 ----------
 
-Lines 11 and onward in the file are a table of observations. Line 11 is a header, lines 12 and on are observations. Missing values can be given as ``NA`` or left blank. The table must contain these columns in this order:
+Lines 12 and onward in the file are a table of observations. Line 12 is a header, lines 13 and on are observations. Missing values can be given as ``NA`` or left blank. The table must contain these columns in this order:
 
    ``Year``: 
    Year in which the observation was made (UTC). An integer.

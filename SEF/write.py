@@ -15,6 +15,7 @@
 
 import io
 import pandas
+import copy
 
 def write_file(obs,file_name):
     """Write the specified set of obs to a file in SEF format.
@@ -39,22 +40,20 @@ def write_file(obs,file_name):
     except:
        raise ValueError("This does not look like a SEF datastructure")
 
+    # Operate on local copy
+    obs=copy.deepcopy(obs)
     f=io.open(file_name,'w',encoding='utf8')
+    # Meta might need packing
+    obs['Meta']=_pack(obs['Meta'])
     # Header first
     for header in ('SEF','ID','Name','Lat','Lon','Alt','Source','Repro',
-                   'Var'):
+                   'Var','Units','Meta'):
         if(obs[header] is not None):
             f.write("%s\t%s\n" % (header,obs[header]))
         else:
             f.write("%s\t\n" % header)
-    # Meta might need packing
-    if obs['Meta'] is None:
-        f.write("Meta\t\n")
-    elif isinstance(obs['Meta'], basestring):
-        f.write("Meta\t%s\n" % obs['Meta'])
-    else:
-        f.write("Meta\t%s\n" %  ','.join(obs['Meta']))
     # Add the data table
+    obs['Data']['Meta']=obs['Data']['Meta'].map(_pack,na_action='ignore')
     obs['Data'].to_csv(f,sep='\t',columns=('Year','Month',
                                            'Day','HHMM',
                                            'TimeF','Value',
@@ -62,3 +61,10 @@ def write_file(obs,file_name):
                        header=True)
     f.close()
 
+def _pack(M_list):
+    if M_list is None:
+        return M_list
+    elif isinstance(M_list, basestring):
+        return M_list
+    else:
+        return ','.join(obs['Meta'])
