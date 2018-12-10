@@ -13,7 +13,7 @@
 
 # Store a set of weather observations in a Station Exchange Format (SEF) file
 
-import io
+import codecs
 import pandas
 import copy
 
@@ -42,23 +42,23 @@ def write_file(obs,file_name):
 
     # Operate on local copy
     obs=copy.deepcopy(obs)
-    f=io.open(file_name,'w',encoding='utf8')
+    f=codecs.open(file_name,'w',encoding='utf-8')
     # Meta might need packing
     obs['Meta']=_pack(obs['Meta'])
     # Header first
-    for header in ('SEF','ID','Name','Lat','Lon','Alt','Source','Repro',
+    for header in ('SEF','ID','Name','Lat','Lon','Alt','Source','Repo',
                    'Var','Units','Meta'):
-        if(obs[header] is not None):
-            f.write("%s\t%s\n" % (header,obs[header]))
+        if(obs[header] is not None and obs[header]==obs[header]):
+            f.write(u"%s\t%s\n" % (header,obs[header]))
         else:
-            f.write("%s\t\n" % header)
+            f.write(u"%s\t\n" % header)
     # Add the data table
     obs['Data']['Meta']=obs['Data']['Meta'].map(_pack,na_action='ignore')
     obs['Data'].to_csv(f,sep='\t',columns=('Year','Month',
                                            'Day','HHMM',
                                            'TimeF','Value',
                                            'Meta'),
-                       header=True)
+                       header=True,index=False)
     f.close()
 
 def _pack(M_list):
@@ -67,4 +67,4 @@ def _pack(M_list):
     elif isinstance(M_list, basestring):
         return M_list
     else:
-        return ','.join(obs['Meta'])
+        return ','.join(M_list)
