@@ -33,7 +33,7 @@ Will create the specified SEF file with the obs as specified.
 |
 """
 
-from create import *
-from read import *
-from write import *
+from .create import *
+from .read import *
+from .write import *
 

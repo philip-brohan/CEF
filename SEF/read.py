@@ -34,7 +34,7 @@ def read_file(file_name):
     f=io.open(file_name,'r',encoding='utf8')
     # Check that it's a SEF file and get the version
     l=f.readline().rstrip()
-    if l[0:4] != u'SEF\t':
+    if l[0:4] != 'SEF\t':
         raise IOError("%s does not look like a SEF file" % file_name)
     version=l.split('\t')[1]
     iversion=[int(x) for x in version.split('.')]
@@ -54,8 +54,8 @@ def read_file(file_name):
     # Read in the data table
     o=pandas.read_csv(file_name,sep='\t',
                       skiprows=11,
-                      usecols=range(7))
-    o['Meta']=o['Meta'].map(lambda(x): x.split(','),
+                      usecols=list(range(7)))
+    o['Meta']=o['Meta'].map(lambda x: x.split(','),
                             na_action='ignore')
     result['Data']=o
     return result

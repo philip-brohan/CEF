@@ -49,9 +49,9 @@ def write_file(obs,file_name):
     for header in ('SEF','ID','Name','Lat','Lon','Alt','Source','Repo',
                    'Var','Units','Meta'):
         if(obs[header] is not None and obs[header]==obs[header]):
-            f.write(u"%s\t%s\n" % (header,obs[header]))
+            f.write("%s\t%s\n" % (header,obs[header]))
         else:
-            f.write(u"%s\t\n" % header)
+            f.write("%s\t\n" % header)
     # Add the data table
     obs['Data']['Meta']=obs['Data']['Meta'].map(_pack,na_action='ignore')
     obs['Data'].to_csv(f,sep='\t',columns=('Year','Month',
@@ -64,7 +64,7 @@ def write_file(obs,file_name):
 def _pack(M_list):
     if M_list is None:
         return M_list
-    elif isinstance(M_list, basestring):
+    elif isinstance(M_list, str):
         return M_list
     else:
         return ','.join(M_list)
