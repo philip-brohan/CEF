@@ -1,20 +1,21 @@
-SEF	0.0.1
+SEF	0.2.0
 ID	DWR_Zarate
 Name	Zárate
+Source	NA
 Lat	-34.0958
 Lon	-59.0242
-Alt	NA
-Source	NA
-Repo	NA
-Var	msl pressure
+Alt	20.25
+Link	https://data-rescue.copernicus-climate.eu/lso/1086267
+Vbl	msl pressure
+Stat	0
 Units	hPa
-Meta	PTC=T,PGC=?
-Year	Month	Day	HHMM	TimeF	Value	Meta	
-1902	12	22	700	0	1005.91	
-1902	12	23	700	0	1009.78	
-1902	12	24	700	0	1000.18	
-1902	12	25	700	0	1015.11	
-1902	12	26	700	0	1009.65	PTC=T,PGC=?
-1902	12	27	700	0	1009.78	PTC=T,PGC=?
-1902	12	28	700	0	1014.05	
-1902	12	29	700	0	1016.18	PTC=T,PGC=?
+Meta	Alias=Zarate|PTC=T|PGC=?
+Year	Month	Day	Hour	Minute	Time	Value	Meta	
+1902	12	22	18	17	0	1005.91	Orig.=754.5mm
+1902	12	23	18	17	0	1009.78	Orig.=757.4mm
+1902	12	24	18	17	0	1000.18	Orig.=750.2mm
+1902	12	25	18	17	0	1015.11	Orig.=761.4mm
+1902	12	26	18	17	0	1009.65 Orig.=757.3mm
+1902	12	27	18	17	0	1009.78	Orig.=757.4mm
+1902	12	28	18	17	0	1014.05	Orig.=760.6mm
+1902	12	29	18	17	0	1016.18	Orig.=762.2mm

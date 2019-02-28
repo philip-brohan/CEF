@@ -12,8 +12,9 @@ This format is for land observations from fixed stations. Marine observations, a
 .. toctree::
    :maxdepth: 1
 
+   What is it, and why? <design>
    The file format <SEF>
-   The python API </module_SEF.rst>
+   The python API </module_SEF>
 
 .. toctree::
    :maxdepth: 1
