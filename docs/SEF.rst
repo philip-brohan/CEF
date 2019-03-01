@@ -46,7 +46,7 @@ The first 10 lines of the file are a series of headers, each given as a ``name``
    Units in which the variable value is given (e.g. 'hPa', 'Pa', 'K', 'm/s'). Where possible, this should be compliant with `UDUNITS-2 <https://www.unidata.ucar.edu/software/udunits/>`_.
 
    ``Meta``:
-   Anything else. Pipe-separated ('|') string of metadata entries. Each entry may be any string (except no tabs, pipes, or carriage returns). There is a :doc:`standard list of meaningful entries <tables/metadata>`, but other entries can be added as necessary. Metadata specified here is assumed to apply to all observations in this file, unless overwritten by the observation-specific metadata entry.
+   Anything else. Pipe-separated (|) string of metadata entries. Each entry may be any string (except no tabs, pipes, or carriage returns). There is a :doc:`standard list of meaningful entries <tables/metadata>`, but other entries can be added as necessary. Metadata specified here is assumed to apply to all observations in this file, unless overwritten by the observation-specific metadata entry.
 
 Data table
 ----------
@@ -69,10 +69,10 @@ Lines 13 and onward in the file are a table of observations. Line 13 is a header
    Minute at which the observation was made (UTC). An integer (0-59)
 
    ``Period``:
-   Time period of observation (instantanious, sum over previous 24 hours, ...). Integer code. There is a :doc:`table of meaningful codes <tables/time_period_codes>`.
+   Time period of observation (instantanious, sum over previous 24 hours, ...). There is a :doc:`table of meaningful codes <tables/time_period_codes>`.
 
    ``Value``:
    The observation value.
 
    ``Meta``:
-   Anything else. Pipe-separated ('|') string of metadata entries. Each entry may be any string (except no tabs, commas, or carriage returns). There is a :doc:`standard list of meaningful entries <tables/metadata>`, but other entries can be added as necessary. Metadata specified here only applies to this observation, and overrides any file-wide specification.
+   Anything else. Pipe-separated (|) string of metadata entries. Each entry may be any string (except no tabs, commas, or carriage returns). There is a :doc:`standard list of meaningful entries <tables/metadata>`, but other entries can be added as necessary. Metadata specified here only applies to this observation, and overrides any file-wide specification.
