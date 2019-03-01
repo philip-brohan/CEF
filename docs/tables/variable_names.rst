@@ -7,18 +7,17 @@ Standard variable names
 
 - wind speed
 - wind direction
-- uwind
-- vwind
+- eastward wind
+- northward wind
 - surface pressure
 - msl pressure
-- pressure temperature
+- barometer temperature
 - temperature
 - maximum temperature
 - minimum temperature
-- grass maximum temperature
-- grass minimum temperature
+- grass temperature
 - soil temperature
-- SST
+- water temperature
 - relative humidity
 - water vapour pressure
 - absolute humidity
@@ -28,17 +27,9 @@ Standard variable names
 - sunshine duration
 - precipitation
 - precipitation hours
-- evapouration
-- actinometry
-- max irradiation temperature
-- min irradiation temperature
-- mean wind speed
-- electric state of atmosphere
-- percentage of insolation
-- total insolation
 - visibility
-- soil status
-- present weather status
+
+If the variable being measured is not in this list, use a value from a controlled vocabulary such as the `C3S Common Data Model <https://github.com/glamod/common_data_model/blob/master/tables/observed_variable.dat>`_
 
 
  
